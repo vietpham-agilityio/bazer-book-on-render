@@ -34,6 +34,9 @@
       "relation": "oneToOne",
       "target": "api::book.book",
       "inversedBy": "author"
+    },
+    "description": {
+      "type": "text"
     }
   }
 }
