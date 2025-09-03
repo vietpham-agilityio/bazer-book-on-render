@@ -22,18 +22,17 @@
     },
     "avatar": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "allowedTypes": [
         "images",
         "files"
       ]
     },
-    "book": {
+    "books": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::book.book",
-      "inversedBy": "author"
+      "relation": "oneToMany",
+      "target": "api::book.book"
     },
     "description": {
       "type": "text"

@@ -41,12 +41,6 @@
     "reviews": {
       "type": "integer",
       "default": 3982
-    },
-    "author": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::author.author",
-      "mappedBy": "book"
     }
   }
 }

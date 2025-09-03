@@ -384,9 +384,9 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    avatar: Schema.Attribute.Media<'images' | 'files', true> &
+    avatar: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
-    book: Schema.Attribute.Relation<'oneToOne', 'api::book.book'>;
+    books: Schema.Attribute.Relation<'oneToMany', 'api::book.book'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -419,7 +419,6 @@ export interface ApiBookBook extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    author: Schema.Attribute.Relation<'oneToOne', 'api::author.author'>;
     coverImage: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
