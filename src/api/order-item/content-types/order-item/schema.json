@@ -24,9 +24,8 @@
     },
     "order": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::order.order",
-      "inversedBy": "order_items"
+      "relation": "oneToOne",
+      "target": "api::order.order"
     }
   }
 }
