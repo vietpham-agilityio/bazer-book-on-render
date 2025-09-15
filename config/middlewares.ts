@@ -15,15 +15,7 @@ export default [
       },
     },
   },
-  {
-    name: "strapi::cors",
-    config: {
-      enabled: true,
-      origin: ["*", "http://localhost:8081"],
-      methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
-      headers: ["Content-Type", "Authorization", "Origin", "Accept"],
-    },
-  },
+  "strapi::cors",
   "strapi::poweredBy",
   "strapi::query",
   "strapi::body",
